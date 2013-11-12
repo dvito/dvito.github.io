@@ -1,62 +1,74 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Category: jekyll</title>
-      <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Category: jekyll</title>
+    <meta name="viewport" content="width=device-width">
 
-      <!-- syntax highlighting CSS -->
-      <link rel="stylesheet" href="/css/syntax.css">
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
 
-      <!-- Custom CSS -->
-      <link rel="stylesheet" href="/css/foundation.min.css">
-      <link rel="stylesheet" href="/css/normalize.css">
-      <link rel="stylesheet" href="/css/webicons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/foundation.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/webicons.css">
 
-  </head>
+</head>
   <body>
     <!-- Nav -->
-    <div class="row">
-  <div class="large-12 columns">
-    <div class="nav-bar right">
-      <ul class="button-group">
-        <li><a href="/index.html" class="button">Blog</a></li>
-        <li><a href="/posts.html" class="button">Posts</a></li>
-        <li><a href="/projects.html" class="button">Projects</a></li>
-        <li><a href="/about.html" class="button">About</a></li>
-      </ul>
-    </div>
-    <h1>Justin Raines <small>Developer</small></h1>
-    <hr />
-  </div>
-</div>
+    <nav class="top-bar" style="">
+  <ul class="title-area">
+    <!-- Title Area -->
+    <li class="name">
+      <h1><a href="/index.html">Justin's Blog</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section" style="left: 0%;">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="divider"></li>
+      <li><a href="/index.html">Blog</a></li>
+      <li class="divider"></li>
+      <li><a href="/posts.html">Posts</a></li>
+      <li class="divider"></li>
+      <li><a href="/projects.html">Projects</a></li>
+      <li class="divider"></li>
+      <li><a href="/about.html">About</a></li>
+      <li class="divider"></li>
+    </ul>
+  </section>
+</nav>
     <!-- End Nav -->
 
     <!-- Main Page Content and Sidebar -->
     <div class="row">
       <!-- Main Blog Content -->
       <div class="large-9 columns" role="content">
-        <div class="large-9 columns" role="content">
-  <h2 class="post_title">Category: jekyll</h2>
-  <ul>
-    
-      <li><span>11 Nov 2013</span> &raquo; <a href="/jekyll/2013/11/11/second-post.html">Second Post</a></li>
-    
-      <li><span>11 Nov 2013</span> &raquo; <a href="/jekyll/update/2013/11/11/welcome-to-jekyll.html">First Post</a></li>
-    
-  </ul>
+        <div class="row">
+  <div class="large-9 columns" role="content">
+    <h2 class="post_title">Category: jekyll</h2>
+    <ul>
+      
+        <li><span>11 Nov 2013</span> &raquo; <a href="/jekyll/2013/11/11/second-post.html">Second Post</a></li>
+      
+        <li><span>11 Nov 2013</span> &raquo; <a href="/jekyll/update/2013/11/11/welcome-to-jekyll.html">First Post</a></li>
+      
+    </ul>
+  </div>
+  <aside class="large-3 columns">
+    <h5>Categories</h5>
+    <ul class="side-nav">
+      
+      <li><a href="/categories/jekyll">jekyll</a></li>
+      
+      <li><a href="/categories/update">update</a></li>
+      
+    </ul>
+  </aside>
 </div>
-<aside class="large-2 columns">
-  <h5>Categories</h5>
-  <ul class="side-nav">
-    
-    <li><a href="/categories/jekyll">jekyll</a></li>
-    
-    <li><a href="/categories/update">update</a></li>
-    
-  </ul>
-</aside>
       </div>
       <!-- End Main Content -->
     </div>
@@ -73,6 +85,14 @@
     </div>
   </div>
 </footer>
+    <script src="/js/vendor/jquery.js"></script>
+<script src="/js/vendor/custom.modernizr.js"></script>
+<script src="/js/vendor/zepto.js"></script>
+<script src="/js/foundation.min.js"></script>
+<script>
+  $(document).foundation();
+</script>
+
     <!-- End Footer -->
   </body>
 </html>
