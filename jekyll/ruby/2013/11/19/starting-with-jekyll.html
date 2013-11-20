@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Category: update</title>
+    <title>Post</title>
     <meta name="viewport" content="width=device-width">
 
     <!-- syntax highlighting CSS -->
@@ -47,31 +47,49 @@
         <!-- Main Page Content and Sidebar -->
         <div class="row">
           <!-- Main Blog Content -->
-          <div class="col-xs-12 col-md-10 col-lg-9">
-            <h2 class="post_title">Category: update</h2>
-<ul>
-  
-    <li><span>11 Nov 2013</span> &raquo; <a href="/jekyll/2013/11/11/second-post.html">Second Post</a></li>
-  
-    <li><span>11 Nov 2013</span> &raquo; <a href="/jekyll/update/2013/11/11/welcome-to-jekyll.html">First Post</a></li>
-  
-</ul>
+          <div class="col-xs-12 cols-s-8 col-md-9 col-lg-9">
+            <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title"><a href=""></a></h2>
+      <ul class="list-inline small no-margin">
+        <li>Categories:</li>
+        
+      </ul>
+    </div>
+    <div class="panel-body">
+      <p>I&#39;m testing Jekyll right now as a blogging method. This test post contains some code syntax highlighting</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="k">def</span> <span class="nf">show</span>
+  <span class="vi">@widget</span> <span class="o">=</span> <span class="no">Widget</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:id</span><span class="o">]</span><span class="p">)</span>
+  <span class="n">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nb">format</span><span class="o">|</span>
+    <span class="nb">format</span><span class="o">.</span><span class="n">html</span> <span class="c1"># show.html.erb</span>
+    <span class="nb">format</span><span class="o">.</span><span class="n">json</span> <span class="p">{</span> <span class="n">render</span> <span class="ss">json</span><span class="p">:</span> <span class="vi">@widget</span> <span class="p">}</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>
+
+    </div>
+  </div>
           </div>
           <!-- End Main Content -->
           <!-- Sidebar -->
-          <div class="col-md-2 col-lg-3">
+          <div class="col-s-4 col-md-3 col-lg-3">
             <h5>Categories</h5>
             <ul class="list-group">
               
-                <li class="list-group-item">
-                  <a href="/categories/jekyll">jekyll</a>
-                  <span class="badge">2</span>
-                </li>
+                <a href="/categories/jekyll">
+                  <li class="list-group-item">
+                    jekyll
+                    <span class="badge">1</span>
+                  </li>
+                </a>
               
-                <li class="list-group-item">
-                  <a href="/categories/update">update</a>
-                  <span class="badge">1</span>
-                </li>
+                <a href="/categories/ruby">
+                  <li class="list-group-item">
+                    ruby
+                    <span class="badge">1</span>
+                  </li>
+                </a>
               
             </ul>
           </div>
