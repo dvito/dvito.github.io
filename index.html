@@ -64,6 +64,24 @@
     <div class="panel-body">
       <p>I&#39;m testing Jekyll right now as a blogging method. This test post contains some code syntax highlighting</p>
 
+<p>ruby</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="lineno">1</span> <span class="k">def</span> <span class="nf">show</span>
+<span class="lineno">2</span>   <span class="vi">@widget</span> <span class="o">=</span> <span class="no">Widget</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:id</span><span class="o">]</span><span class="p">)</span>
+<span class="lineno">3</span>   <span class="n">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nb">format</span><span class="o">|</span>
+<span class="lineno">4</span>     <span class="nb">format</span><span class="o">.</span><span class="n">html</span> <span class="c1"># show.html.erb</span>
+<span class="lineno">5</span>     <span class="nb">format</span><span class="o">.</span><span class="n">json</span> <span class="p">{</span> <span class="n">render</span> <span class="ss">json</span><span class="p">:</span> <span class="vi">@widget</span> <span class="p">}</span>
+<span class="lineno">6</span>   <span class="k">end</span>
+<span class="lineno">7</span> <span class="k">end</span>
+</code></pre></div>
+
+<p>bash</p>
+
+<div class="highlight"><pre><code class="bash">jekyll build --destination ../dvito.github.io --watch
+
+jekyll build serve --watch
+</code></pre></div>
+
       <a href="/jekyll/ruby/2013/11/19/starting-with-jekyll.html">Read More...</a>
     </div>
   </div>
