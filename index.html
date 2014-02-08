@@ -16,6 +16,12 @@
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/font-awesome.css">
+
+    <!-- fixes for lower IE levels -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
 </head>
   <body>
     <div id="wrap">
@@ -30,14 +36,46 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Justin's Blog</a>
+      <a class="navbar-brand" href="#">Justin Raines</a>
     </div>
     <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/index.html">Home</a></li>
-        <li><a href="/posts.html">Posts</a></li>
-        <li><a href="/projects.html">Projects</a></li>
-        <li><a href="/about.html">About</a></li>
+      <ul class="nav navbar-nav pull-right hidden-xs">
+        
+          <li class="active">
+            <a href="/index.html" title="Personal Blog" ><i class="fa fa-list"></i> Blog</a>
+          </li>
+        
+          <li >
+            <a href="/posts.html" title="Archive of Posts" ><i class="fa fa-archive"></i> Posts</a>
+          </li>
+        
+          <li >
+            <a href="/projects.html" title="Projects I've Worked On" ><i class="fa fa-code"></i> Projects</a>
+          </li>
+        
+          <li >
+            <a href="/about.html" title="About Me" ><i class="fa fa-user"></i> About</a>
+          </li>
+        
+      </ul>
+      <ul class="nav navbar-nav visible-xs">
+        
+          <li class="active">
+            <a href="/index.html" title="Personal Blog" ><i class="fa fa-list"></i> Blog</a>
+          </li>
+        
+          <li >
+            <a href="/posts.html" title="Archive of Posts" ><i class="fa fa-archive"></i> Posts</a>
+          </li>
+        
+          <li >
+            <a href="/projects.html" title="Projects I've Worked On" ><i class="fa fa-code"></i> Projects</a>
+          </li>
+        
+          <li >
+            <a href="/about.html" title="About Me" ><i class="fa fa-user"></i> About</a>
+          </li>
+        
       </ul>
     </div><!--/.nav-collapse -->
   </div>
@@ -62,7 +100,7 @@
       </ul>
     </div>
     <div class="panel-body">
-      <p>I&#39;m testing Jekyll right now as a blogging method. This test post contains some code syntax highlighting</p>
+      <p>I&#39;m testing Jekyll right now as a blogging / resume site method. This test post contains some code syntax highlighting</p>
 
 <p>ruby</p>
 
@@ -93,23 +131,19 @@ jekyll build serve --watch
 <!-- Sidebar -->
 <div class="col-s-4 col-md-3 col-lg-3">
   <h5>Categories</h5>
-  <ul class="list-group">
+  <div class="list-group">
     
-      <li class="list-group-item">
-        <a href="/categories/jekyll">
+      <a href="/categories/jekyll" class="list-group-item">
+        <span class="badge pull-right">1</span>
         jekyll
-        <span class="badge">1</span>
-        </a>
-      </li>
+      </a>
     
-      <li class="list-group-item">
-        <a href="/categories/ruby">
+      <a href="/categories/ruby" class="list-group-item">
+        <span class="badge pull-right">1</span>
         ruby
-        <span class="badge">1</span>
-        </a>
-      </li>
+      </a>
     
-  </ul>
+  </div>
 </div>
 <!-- End Sidebar -->
         </div>
@@ -136,11 +170,12 @@ jekyll build serve --watch
     <!-- Footer -->
     <div id="footer">
   <div class="container">
-    <p class="text-muted credit">Brought to you with <a href="http://jekyllrb.com/">Jekyll</a>, <a href="http://getbootstrap.com/">Bootstrap</a>, and <a href="http://fontawesome.io/">Font Awesome</a>.</p>
+    <p class="text-muted credit">Brought to you with <a href="http://jekyllrb.com/">Jekyll</a>, <a href="http://getbootstrap.com/">Bootstrap</a>, and <a href="http://pages.github.com/">Github Pages</a>.</p>
   </div>
 </div>
     <script src="/js/jquery-1.10.2.min.js"></script>
 <script src="/js/bootstrap.js"></script>
+
     <!-- End Footer -->
   </body>
 </html>
