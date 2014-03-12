@@ -77,37 +77,46 @@
           <div class="col-xs-12 cols-s-8 col-md-9 col-lg-9">
             <div class="panel panel-default">
   <div class="panel-heading">
-    <h2 class="panel-title"><a href="/jekyll/category/ruby/2013/11/19/starting-with-jekyll.html">Starting with Jekyll</a></h2>
+    <h1 class="panel-title"><a href="/jekyll/ruby/2014/03/10/starting-with-jekyll.html">Starting with Jekyll</a></h1>
     <ul class="list-inline small no-margin">
       <li>Categories:</li>
       
         <li><a href="/categories/jekyll">jekyll</a></li>
-      
-        <li><a href="/categories/category">category</a></li>
       
         <li><a href="/categories/ruby">ruby</a></li>
       
     </ul>
   </div>
   <div class="panel-body">
-    <p>I&#39;m testing Jekyll right now as a blogging / resume site method.</p>
+    <p>I&#39;m testing Jekyll right now as a blogging / resume site method.  Its a pretty cool application, and really frees me up to just write some simple markdown, without getting caught up in a ton of other development issues.</p>
 
-<p>ruby</p>
+<p>I&#39;m using two repositories to accomplish my Jekyll goals, due to the lack of plugin support when using <a href="https://github.com/"><i class="fa fa-github-alt">Github</i></a> as a host.</p>
 
-<div class="highlight"><pre><code class="ruby"><span class="lineno">1</span> <span class="k">def</span> <span class="nf">show</span>
-<span class="lineno">2</span>   <span class="vi">@widget</span> <span class="o">=</span> <span class="no">Widget</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:id</span><span class="o">]</span><span class="p">)</span>
-<span class="lineno">3</span>   <span class="n">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nb">format</span><span class="o">|</span>
-<span class="lineno">4</span>     <span class="nb">format</span><span class="o">.</span><span class="n">html</span> <span class="c1"># show.html.erb</span>
-<span class="lineno">5</span>     <span class="nb">format</span><span class="o">.</span><span class="n">json</span> <span class="p">{</span> <span class="n">render</span> <span class="ss">json</span><span class="p">:</span> <span class="vi">@widget</span> <span class="p">}</span>
-<span class="lineno">6</span>   <span class="k">end</span>
-<span class="lineno">7</span> <span class="k">end</span>
-</code></pre></div>
-
-<p>bash</p>
+<p>From ../pages_master</p>
 
 <div class="highlight"><pre><code class="bash">jekyll build --destination ../dvito.github.io --watch
+</code></pre></div>
 
-jekyll build serve --watch
+<p>In ../dvito.github.io</p>
+
+<div class="highlight"><pre><code class="bash">jekyll serve --watch
+</code></pre></div>
+
+<p>You can also configure this in ../_config.yml</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nb">source</span>: /Users/justinraines/Code/pages_master
+destination: /Users/justinraines/Code/dvito.github.io
+</code></pre></div>
+
+<p>And then you can just run:
+From ../pages_master</p>
+
+<div class="highlight"><pre><code class="bash">jekyll build --watch
+</code></pre></div>
+
+<p>In ../dvito.github.io</p>
+
+<div class="highlight"><pre><code class="bash">jekyll serve --watch
 </code></pre></div>
 
   </div>
@@ -137,18 +146,28 @@ jekyll build serve --watch
   <div class="list-group">
     
       <a href="/categories/jekyll" class="list-group-item">
-        <span class="badge pull-right">2</span>
+        <span class="badge pull-right">1</span>
         jekyll
       </a>
     
-      <a href="/categories/category" class="list-group-item">
+      <a href="/categories/ruby" class="list-group-item">
         <span class="badge pull-right">1</span>
-        category
+        ruby
       </a>
     
-      <a href="/categories/ruby" class="list-group-item">
-        <span class="badge pull-right">2</span>
-        ruby
+      <a href="/categories/leaflet" class="list-group-item">
+        <span class="badge pull-right">1</span>
+        leaflet
+      </a>
+    
+      <a href="/categories/handlebars" class="list-group-item">
+        <span class="badge pull-right">1</span>
+        handlebars
+      </a>
+    
+      <a href="/categories/javascript" class="list-group-item">
+        <span class="badge pull-right">1</span>
+        javascript
       </a>
     
   </div>
