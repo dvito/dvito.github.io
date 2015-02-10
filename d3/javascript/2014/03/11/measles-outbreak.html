@@ -97,6 +97,8 @@
 
 </div>
 
+<p>Oh wait, its basically just california. Thanks California.</p>
+
 <script src="/js/d3.v3.min.js"></script>
 
 <script src="/js/topojson.min.js"></script>
@@ -118,10 +120,14 @@
         data: data,
         geographyConfig: {
             popupTemplate: function(geo, data) {
-                return ['<div class="hoverinfo"><strong>',
+                if(data){
+                    return ['<div class="hoverinfo"><strong>',
                         'Number of cases in ' + geo.properties.name,
                         ': ' + data.cases,
                         '</strong></div>'].join('');
+                }else{
+                    return "";
+                }
             }
         }
     });
