@@ -2,7 +2,7 @@
 <html>
   <head lang="en">
     <meta charset="utf-8">
-    <title>Category: handlebars</title>
+    <title>Measles Outbreak</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <!-- Fonts -->
@@ -83,16 +83,63 @@
         <div class="row">
           <!-- Main Blog Content -->
           <div class="col-xs-12 cols-s-8 col-md-9 col-lg-9">
-            <h1 class="lead">Category: handlebars</h2>
-<ul>
-  
-    <li>
-      <span>11 Mar 2014</span>
-      <i class="fa fa-angle-double-right"></i>
-      <a href="/leaflet/handlebars/javascript/2014/03/11/leaflet-handlebars-example.html">Leaflet, Handlebars, Simple Map Application</a>
-    </li>
-  
-</ul>
+            <h1>Measles Outbreak</h1>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Main Blog Content -->
+          <div class="col-xs-12 cols-s-8 col-md-9 col-lg-9">
+            <p>Goal is to show where the outbreak is, and where the likely concentration of folks that aren&#39;t vaccinating are based on this.</p>
+
+<p>I realize some of these poor parents have been infected by other kids, particularly from places like disneyworld.  However, the CDC data also shows there is likely a correlations between areas with a concentration of these issues and bad parents ignoring science.</p>
+
+<p>This data is only updated on mondays, so it may be slightly off.</p>
+
+<div id="map-target" style="height: 500px">
+
+</div>
+
+<p>Oh wait, its basically just california. Thanks California.</p>
+
+<p>Source: <a href="http://www.cdc.gov/measles/cases-outbreaks.html">CDC Measles Data</a> (http://www.cdc.gov/measles/cases-outbreaks.html)</p>
+
+<script src="/js/d3.v3.min.js"></script>
+
+<script src="/js/topojson.min.js"></script>
+
+<script src="/js/datamaps.min.js"></script>
+
+<script>
+  var data = {"AZ":{"cases":"7","fillKey":"MEDIUM"},"CA":{"cases":"88","fillKey":"HIGH"},"CO":{"cases":"1","fillKey":"LOW"},"DC":{"cases":"1","fillKey":"LOW"},"DE":{"cases":"1","fillKey":"LOW"},"IL":{"cases":"3","fillKey":"MEDIUM"},"MI":{"cases":"1","fillKey":"LOW"},"MN":{"cases":"1","fillKey":"LOW"},"NE":{"cases":"2","fillKey":"MEDIUM"},"NJ":{"cases":"1","fillKey":"LOW"},"NY":{"cases":"2","fillKey":"MEDIUM"},"NV":{"cases":"2","fillKey":"MEDIUM"},"OR":{"cases":"1","fillKey":"LOW"},"PA":{"cases":"1","fillKey":"LOW"},"SD":{"cases":"2","fillKey":"MEDIUM"},"UT":{"cases":"2","fillKey":"MEDIUM"},"WA":{"cases":"4","fillKey":"MEDIUM"}};
+  var map = new Datamap({
+        element: document.getElementById('map-target'),
+        scope: 'usa',
+        fills: {
+            HIGH: 'red',
+            LOW: 'yellow',
+            MEDIUM: 'orange',
+            UNKNOWN: 'rgb(0,0,0)',
+            defaultFill: 'grey'
+        },
+        data: data,
+        geographyConfig: {
+            popupTemplate: function(geo, data) {
+                if(data){
+                    return ['<div class="hoverinfo"><strong>',
+                        'Number of cases in ' + geo.properties.name,
+                        ': ' + data.cases,
+                        '</strong></div>'].join('');
+                }else{
+                    return ['<div class="hoverinfo"><strong>',
+                        'Number of cases in ' + geo.properties.name,
+                        ' is currently zero!',
+                        '</strong></div>'].join('');
+                }
+            }
+        }
+    });
+
+</script>
 
           </div>
           <!-- End Main Content -->
@@ -102,24 +149,14 @@
   <h3 class="lead">Categories</h3>
   <div class="list-group">
     
-      <a href="/categories/jekyll" class="list-group-item">
-        <span class="badge pull-right">1</span>
-        jekyll
-      </a>
-    
       <a href="/categories/ruby" class="list-group-item">
         <span class="badge pull-right">1</span>
         ruby
       </a>
     
-      <a href="/categories/leaflet" class="list-group-item">
-        <span class="badge pull-right">1</span>
-        leaflet
-      </a>
-    
-      <a href="/categories/handlebars" class="list-group-item">
-        <span class="badge pull-right">1</span>
-        handlebars
+      <a href="/categories/examples" class="list-group-item">
+        <span class="badge pull-right">2</span>
+        examples
       </a>
     
       <a href="/categories/javascript" class="list-group-item">
@@ -127,9 +164,9 @@
         javascript
       </a>
     
-      <a href="/categories/d3" class="list-group-item">
+      <a href="/categories/health_data" class="list-group-item">
         <span class="badge pull-right">1</span>
-        d3
+        health_data
       </a>
     
   </div>

@@ -2,7 +2,7 @@
 <html>
   <head lang="en">
     <meta charset="utf-8">
-    <title>Category: d3</title>
+    <title>Starting with Jekyll</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <!-- Fonts -->
@@ -83,16 +83,42 @@
         <div class="row">
           <!-- Main Blog Content -->
           <div class="col-xs-12 cols-s-8 col-md-9 col-lg-9">
-            <h1 class="lead">Category: d3</h2>
-<ul>
-  
-    <li>
-      <span>10 Feb 2015</span>
-      <i class="fa fa-angle-double-right"></i>
-      <a href="/d3/javascript/2015/02/10/measles-outbreak.html">Measles Outbreak</a>
-    </li>
-  
-</ul>
+            <h1>Starting with Jekyll</h1>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Main Blog Content -->
+          <div class="col-xs-12 cols-s-8 col-md-9 col-lg-9">
+            <p>I&#39;m testing Jekyll right now as a blogging / resume site method.  Its a pretty cool application, and really frees me up to just write some simple markdown, without getting caught up in a ton of other development issues.</p>
+
+<p>I&#39;m using two repositories to accomplish my Jekyll goals, due to the lack of plugin support when using <a href="https://github.com/"><i class="fa fa-github-alt">Github</i></a> as a host.</p>
+
+<p>From ../pages_master</p>
+
+<div class="highlight"><pre><code class="bash">jekyll build --destination ../dvito.github.io --watch
+</code></pre></div>
+
+<p>In ../dvito.github.io</p>
+
+<div class="highlight"><pre><code class="bash">jekyll serve --watch
+</code></pre></div>
+
+<p>You can also configure this in ../_config.yml</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nb">source</span>: /Users/justinraines/Code/pages_master
+destination: /Users/justinraines/Code/dvito.github.io
+</code></pre></div>
+
+<p>And then you can just run:
+From ../pages_master</p>
+
+<div class="highlight"><pre><code class="bash">jekyll build --watch
+</code></pre></div>
+
+<p>In ../dvito.github.io</p>
+
+<div class="highlight"><pre><code class="bash">jekyll serve --watch
+</code></pre></div>
 
           </div>
           <!-- End Main Content -->
@@ -102,24 +128,14 @@
   <h3 class="lead">Categories</h3>
   <div class="list-group">
     
-      <a href="/categories/jekyll" class="list-group-item">
-        <span class="badge pull-right">1</span>
-        jekyll
-      </a>
-    
       <a href="/categories/ruby" class="list-group-item">
         <span class="badge pull-right">1</span>
         ruby
       </a>
     
-      <a href="/categories/leaflet" class="list-group-item">
-        <span class="badge pull-right">1</span>
-        leaflet
-      </a>
-    
-      <a href="/categories/handlebars" class="list-group-item">
-        <span class="badge pull-right">1</span>
-        handlebars
+      <a href="/categories/examples" class="list-group-item">
+        <span class="badge pull-right">2</span>
+        examples
       </a>
     
       <a href="/categories/javascript" class="list-group-item">
@@ -127,9 +143,9 @@
         javascript
       </a>
     
-      <a href="/categories/d3" class="list-group-item">
+      <a href="/categories/health_data" class="list-group-item">
         <span class="badge pull-right">1</span>
-        d3
+        health_data
       </a>
     
   </div>
